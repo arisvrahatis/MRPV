@@ -35,7 +35,7 @@ function prediction = MRPV(data_test, data_train, labels, RPdim, RPspaces, Fitop
     
     %for each subspace, find k nearest neighbours and compute class percentages
     for rp = 1:RPspaces
-        % Projection
+        % Projection (we create all multiplications in one matrix)
         d_tr  = B_tr(:, (rp * RPdim - RPdim + 1):(rp * RPdim));
         d_ts  = B_ts(:, (rp * RPdim - RPdim + 1):(rp * RPdim));
             
