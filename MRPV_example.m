@@ -1,4 +1,4 @@
-
+% Load a data matrix with single-cell RNA-seq counts in format CxG (C = Cell Samples, G = Gene Features) 
 load('GSE52583.mat')
 kfold = 10;
 Indices = crossvalind('Kfold', class, kfold);
